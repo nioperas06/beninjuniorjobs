@@ -5,7 +5,7 @@
 Si vous avez un job, vous pouvez créer une ***issue*** avec les informations suivantes:
 
 ```
-Titre: Développeur
+Titre: Développeur Angular
 Entreprise: Nautilus Technology
 Lieu: Agla, Cotonou
 Categorie: Développement
