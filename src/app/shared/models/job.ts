@@ -5,4 +5,5 @@ export class Job {
     location: string;
     category: number;
     url: number;
+    description: string;
 }

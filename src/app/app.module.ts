@@ -6,10 +6,14 @@ import { CoreModule } from './core/core.module';
 import { SharedComponentsModule } from "./shared/components/shared-components.module";
 
 import { ServicesModule } from './shared/services/services.module';
+import { JobComponent } from './job/job.component';
+import { JobBoardComponent } from './job-board/job-board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    JobComponent,
+    JobBoardComponent,
   ],
   imports: [
     BrowserModule,
