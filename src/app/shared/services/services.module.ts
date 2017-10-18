@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { JobsService } from './jobs.service';
+import { JobService } from './job.service';
 
 @NgModule({
   imports: [],
@@ -12,7 +12,7 @@ export class ServicesModule{
     return {
       ngModule: ServicesModule,
       providers: [
-        JobsService
+        JobService
       ]
     }
   }
@@ -20,5 +20,5 @@ export class ServicesModule{
 
 
 export {
-  JobsService
+  JobService
 }
