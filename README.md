@@ -1,5 +1,5 @@
 # Benin Tech Jobs
-:v: Le job board ultime pour les développeurs juniors ou étudiants dans l'industrie tech au Bénin.
+:v: Le job board dédié à l'industrie tech (Développement informatique, Design, DevOps, UX/UI) au Bénin.
 
 # Ajouter un job
 Si vous avez un job, vous pouvez créer une ***issue*** avec les informations suivantes:
