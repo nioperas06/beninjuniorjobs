@@ -5,7 +5,7 @@
 <!-- Ex. Nautilus Technology -->
 
 ## Lieu
-<!-- Ex. After ending a conversation, every night at 3pm, when I sign off -->
+<!-- Ex. Cotonou, Freelance, etc -->
 
 ## Catégorie
 <!-- Vous pouvez rajouter des tags: PHP, Python, Web, Mobile, etc -->
