@@ -1,4 +1,4 @@
-# Benin Junior Jobs
+# Benin Tech Jobs
 :v: Le job board ultime pour les développeurs juniors ou étudiants dans l'industrie tech au Bénin.
 
 # Ajouter un job
@@ -8,7 +8,8 @@ Si vous avez un job, vous pouvez créer une ***issue*** avec les informations su
 Titre: Développeur Angular
 Entreprise: Nautilus Technology
 Lieu: Agla, Cotonou
-Categorie: Développement
+Categorie: Développement, UX, Web
+Description: Courte descritption (140 caractères)
 URL: Un lien vers le job
 ```
 
