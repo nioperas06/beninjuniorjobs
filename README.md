@@ -31,3 +31,9 @@ $ npm install
 $ ng serve -o
 ```
 :metal::robot::rocket:
+
+### Améliorations
+- [ ] Unit tests
+- [ ] Share on Facebook
+- [ ] Docker integration
+- [ ] Automation
