@@ -24,7 +24,7 @@ Ce projet étant totalement opensource, vous pouvez contribuer librement :v:!
 3. Effectuez un ***pull request***
 
 ## Technologies
-Développé avec [Angular](https://angular.io/)
+[Angular](https://angular.io/)
 
 ```
 $ npm install
