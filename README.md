@@ -16,3 +16,18 @@ URL: Un lien vers le job
 Vous pouvez également le faire via ce [formulaire](#)
 
 ## À propos de ce dépôt
+
+Ce projet étant totalement opensource, vous pouvez contribuer librement :v:!
+
+1. ***forker*** le dépôt
+2. Apporter vos modifications
+3. Effectuez un ***pull request***
+
+## Technologies
+Développé avec [Angular](https://angular.io/)
+
+```
+$ npm install
+$ ng serve -o
+```
+:metal::robot::rocket:
