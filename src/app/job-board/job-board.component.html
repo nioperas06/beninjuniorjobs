@@ -4,10 +4,11 @@
       <div class="col-12">
         <h1>Jobs disponibles</h1>
         <p class="text-h3">
-          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
+          Une liste très simple des meilleurs offres d'emploi dans l'industrie technologique béninoise.
         </p>
       </div>
     </div>
-    <app-job></app-job>
+    <app-job *ngFor="let job of jobs" [job]="job">
+    </app-job>
   </div>
 </section>

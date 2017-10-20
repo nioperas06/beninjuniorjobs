@@ -1,9 +1,9 @@
 export class Job {
     id: number;
     title: string;
-    company: number;
+    company: string;
     location: string;
-    category: number;
-    url: number;
+    category: string;
+    url: string;
     description: string;
 }

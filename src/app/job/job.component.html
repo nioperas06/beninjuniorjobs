@@ -1,14 +1,18 @@
 <div class="row justify-content-center align-items-center pt-5">
   <div class="col-8 col-sm-3">
-    <img alt="image" class="img-fluid" src="assets/img/img_square_2.svg">
+    <img alt="image" class="img-fluid" src="assets/img/nerd.png">
   </div>
   <div class="col-12 col-sm-6 m-auto pt-4 pt-sm-0">
-    <h2><strong>Développeur PHP</strong></h2>
+    <h2><strong>{{ job.title }}</strong></h2>
     <p class="text-h3">
-      Nous recherchons un développeur junior avec une capacité d'apprentissage intéressante.
+      {{ job.description }}
+    </p>
+    <p>
+      <small class="badge badge-pill badge-secondary">{{ job.location }}</small>
+      <small class="badge badge-pill badge-secondary">{{ job.category }}</small>
     </p>
   </div>
   <div class="col-12 col-sm-3 text-center pt-4 pt-sm-0">
-    <p><a class="btn btn-empty" href="https://www.froala.com">Postuler</a></p>
+    <p><a class="btn btn-empty" href="{{ job.url }}" target="_blank">Postuler</a></p>
   </div>
 </div>

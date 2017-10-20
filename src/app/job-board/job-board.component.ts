@@ -12,7 +12,9 @@ export class JobBoardComponent implements OnInit {
   constructor(private jobService: JobService) { }
 
   ngOnInit() {
-    this.jobService.all();
+    this.jobService.getJobs().then(
+      jobs => this.jobs = jobs
+    );
   }
 
 }
