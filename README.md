@@ -35,5 +35,5 @@ $ ng serve -o
 ### Améliorations
 - [ ] Unit tests
 - [ ] Share on Facebook
-- [ ] Docker integration
+- ~~[ ] Docker integration~~
 - [ ] Automation
