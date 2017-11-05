@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Job } from './../shared/models/job';
-import { JobService } from './../shared/services/services.module'
+import { JobService } from './../shared/services/services.module';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-job-board',
