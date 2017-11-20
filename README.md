@@ -1,7 +1,9 @@
 # Benin Tech Jobs
-:v: Le job board dédié à l'industrie tech (Développement informatique, Design, DevOps, UX/UI) au Bénin.
+:v: Benin Tech Jobs change de cap. Initialement, il devait être un simple ***job board***. Benin Tech Jobs devient aujourd'hui une plateforme de recrutement, où n'importe qui peut créer et publier un ***job***. Nous restons toujours un projet opensource dédié à l'industrie tech (Développement informatique, Design, DevOps, UX/UI) au Bénin.
 
 # Ajouter un job
+***Vous pouvez toujours postez vos offres d'emplois avant le déploiement de la nouvelle version du site***
+
 Si vous avez un job, vous pouvez créer une ***issue*** avec les informations suivantes:
 
 ```
@@ -30,10 +32,7 @@ Ce projet étant totalement opensource, vous pouvez contribuer librement :v:!
 $ npm install
 $ ng serve -o
 ```
-:metal::robot::rocket:
+:metal: :robot: :rocket:
 
 ### Améliorations
-- [ ] Unit tests
-- [ ] Share on Facebook
-- ~~[ ] Docker integration~~
-- [ ] Automation
+La nouvelle architecture du site est disponible [ici](https://github.com/nioperas06/benintechjobs-specs). N'hésitez pas à contribuer!
