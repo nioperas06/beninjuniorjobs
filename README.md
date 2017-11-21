@@ -36,9 +36,4 @@ $ ng serve -o
 
 ### Améliorations
 =======
-- [ ] Unit tests
-- ~~[ ] Share on Facebook~~
-- ~~[ ] Docker integration~~
-- [ ] Automation
-
 La nouvelle architecture du site est disponible [ici](https://github.com/nioperas06/benintechjobs-specs). N'hésitez pas à contribuer!
