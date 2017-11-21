@@ -35,5 +35,4 @@ $ ng serve -o
 :metal: :robot: :rocket:
 
 ### Améliorations
-=======
 La nouvelle architecture du site est disponible [ici](https://github.com/nioperas06/benintechjobs-specs). N'hésitez pas à contribuer!
