@@ -29,7 +29,7 @@ export class Job implements ModelInterface {
   }
 
   toJson(): Object {
-    return JSON.stringify({
+    return {
       id: this.id,
       company: this.company,
       email: this.email,
@@ -37,6 +37,6 @@ export class Job implements ModelInterface {
       title: this.title,
       location: this.location,
       description: this.description
-    });
+    };
   }
 }

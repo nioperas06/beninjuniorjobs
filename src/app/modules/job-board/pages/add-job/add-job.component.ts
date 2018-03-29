@@ -12,6 +12,7 @@ export class AddJobComponent implements OnInit {
   job: Job = new Job;
   loading = false;
   jobSent = false;
+  email = '';
 
   constructor(
     private jobService: JobService
@@ -28,11 +29,12 @@ export class AddJobComponent implements OnInit {
     this.jobService.create(this.job)
       .finally(() => {
         this.loading = false;
-        this.jobSent = true;
       })
       .subscribe(
         (response) => {
           console.log(response);
+          this.email = response.email;
+          this.jobSent = true;
         },
         (error) => {
          console.log(error);
