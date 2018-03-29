@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="0d1d80f4e63c5d14660e35b8b637566efd0d28b0" datatype="html">
+        <source>Trouvez le job de vos rêves.</source>
+        <target>Find the job of your dreams.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

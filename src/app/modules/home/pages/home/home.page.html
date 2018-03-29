@@ -1,0 +1,50 @@
+<app-header></app-header>
+<section class="content" style="padding-top: 50px">
+    <div class="container">
+        <div class="row row-sm-middle">
+            <div class="col-xs-12 col-sm-7 col-md-6">
+                <h2 class="text-xlarge">Travaillez dans l'entreprise qui vous correspond.</h2>
+                <p class="text-large text-tint">
+                    BeninTechJobs est un projet <b>opensource</b> qui regroupe en seul endroit toutes les offres d'emploi dédiées à l'univers technologique au Bénin.
+                </p>
+                <p class="text-large text-tint">
+                    Vous pouvez retrouver des offres d'emploi d'entreprises Béninoises ou étrangères recrutant en télé-travail.
+                </p>
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <a routerLink="/new-job" class="btn btn-primary text-bold newsletter">Poster un job</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-lg-offset-1 text-center">
+                <img class="img-sm-75 img-md-100 img-fluid" src="https://lukaszadam.com/img/illustration/29.svg" />
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <section class="container">
+    <div class="advance-search">
+        <form action="#">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-12">
+                    <div class="block d-flex">
+                        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="search" placeholder="Ex: Développeur Angular">
+                        <button class="btn btn-main">Cherchez</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section> -->
+
+<section class="container" style="padding-top: 100px">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <app-job-details *ngFor="let job of jobs" [job]="job">
+            </app-job-details>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

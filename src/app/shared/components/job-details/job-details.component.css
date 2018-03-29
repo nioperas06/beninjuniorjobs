@@ -1,0 +1,14 @@
+.job {
+    border: 1px solid #E4E3E2;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    padding-right: 40px;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+.job:hover {
+    cursor: pointer;
+    background-color: bisque;
+}

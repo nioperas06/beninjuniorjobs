@@ -1,0 +1,65 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-12">
+            <hr>
+            <div class="text-center" *ngIf="jobSent">
+                <img src="https://lukaszadam.com/img/illustration/11.svg" alt="" class="img-fluid" style="width: 200px">
+                <h4 style="padding-top: 50px">Vous serez informé dès que votre offre sera validée. Merci!</h4>
+                <br>
+                <a routerLink="/" class="btn btn-primary">Retour à l'acceuil</a>
+            </div>
+            <div *ngIf="!jobSent">
+                <h4>Veuillez remplir le formulaire ci-dessous:</h4>
+                <form (ngSubmit)="register(form)" #form="ngForm">
+                    <fieldset [disabled]="loading">
+                        <div class="form-group">
+                            <label>Entreprise</label>
+                            <input type="text" name="company" id="company" class="form-control" required [(ngModel)]="job.company" #companyControl="ngModel" [ngClass]="{'is-invalid': form.submitted && companyControl.invalid}" class="form-control" placeholder="BeninTechJobs">
+                            <div class="invalid-feedback">
+                                Entreprise invalide.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" id="email" class="form-control" required email [(ngModel)]="job.email" #emailControl="ngModel" [ngClass]="{'is-invalid': form.submitted && emailControl.invalid}" placeholder="junior@benintechjobs.xyz">
+                            <div class="invalid-feedback">
+                                Email invalide.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>URL du job</label>
+                            <input type="url" name="url" id="url" class="form-control" required url [(ngModel)]="job.url" #urlControl="ngModel" [ngClass]="{'is-invalid': form.submitted && urlControl.invalid}" class="form-control" placeholder="http://benintechjobs.xyz">
+                            <div class="invalid-feedback">
+                                URL invalide.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Poste</label>
+                            <input type="text" name="title" id="title" class="form-control" required [(ngModel)]="job.title" #titleControl="ngModel" [ngClass]="{'is-invalid': form.submitted && titleControl.invalid}" class="form-control" placeholder="Intégrateur web">
+                            <div class="invalid-feedback">
+                                Poste invalide.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Est-ce que votre candidat doit être basé dans un certain endroit (par exemple à Parakou)?</label>
+                            <input type="text" name="location" id="location" class="form-control" required [(ngModel)]="job.location" #locationControl="ngModel" [ngClass]="{'is-invalid': form.submitted && locationControl.invalid}" class="form-control" placeholder="Parakou">
+                            <div class="invalid-feedback">
+                                Lieu invalide.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Décrivez succintement le poste à pourvoir</label>
+                            <textarea name="description" id="description" class="form-control" required [(ngModel)]="job.description" #descriptionControl="ngModel" [ngClass]="{'is-invalid': form.submitted && descriptionControl.invalid}" class="form-control" cols="20" rows="10"></textarea>
+                            <div class="invalid-feedback">
+                                Description invalide.
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-block btn-primary">Soumettre</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
