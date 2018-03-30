@@ -37,7 +37,7 @@
 <section class="container" style="padding-top: 100px">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <app-job-details *ngFor="let job of search(jobs)" [job]="job">
+            <app-job-details *ngFor="let job of jobs" [job]="job">
             </app-job-details>
         </div>
         <div class="text-center" *ngIf="jobs?.length == 0">
