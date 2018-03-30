@@ -5,7 +5,8 @@
             <div class="col-xs-12 col-sm-7 col-md-6">
                 <h2 class="text-xlarge">Travaillez dans l'entreprise qui vous correspond.</h2>
                 <p class="text-large text-tint">
-                    BeninTechJobs est un projet <b>opensource</b> qui regroupe en seul endroit toutes les offres d'emploi dédiées à l'univers technologique au Bénin.
+                    BeninTechJobs est un projet
+                    <a href="https://github.com/nioperas06/benintechjobs" target="_blank"><b>opensource</b></a> qui regroupe en seul endroit toutes les offres d'emploi dédiées à l'univers technologique au Bénin.
                 </p>
                 <p class="text-large text-tint">
                     Vous pouvez retrouver des offres d'emploi d'entreprises Béninoises ou étrangères recrutant en télé-travail.
@@ -24,26 +25,24 @@
         </div>
     </div>
 </section>
-<!-- <section class="container">
-    <div class="advance-search">
-        <form action="#">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-12">
-                    <div class="block d-flex">
-                        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="search" placeholder="Ex: Développeur Angular">
-                        <button class="btn btn-main">Cherchez</button>
-                    </div>
-                </div>
-            </div>
-        </form>
+
+<section class="container" style="padding-top: 100px">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-12">
+            <input type="text" (input)="onSearchChange($event.target.value)" class="form-control" placeholder="Ton prochain job?" style="height: 50px">
+        </div>
     </div>
-</section> -->
+</section>
 
 <section class="container" style="padding-top: 100px">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <app-job-details *ngFor="let job of jobs" [job]="job">
+            <app-job-details *ngFor="let job of search(jobs)" [job]="job">
             </app-job-details>
+        </div>
+        <div class="text-center" *ngIf="jobs?.length == 0">
+            <img src="https://lukaszadam.com/img/illustration/18.svg" alt="" class="img-fluid" style="width: 200px; height: 150px">
+            <h4 style="padding-top: 50px">Aucune offre trouvée!</h4>
         </div>
     </div>
 </section>

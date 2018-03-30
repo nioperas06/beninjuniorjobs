@@ -1,20 +1,16 @@
-<div class="row job">
-    <div class="col-md-6 col-sm-12">
-        <div class="row">
-            <div class="col-xs-2"><img style="width: 200px" class="img-fluid" src="{{job.logo}}" alt="Logo" class="img-responsive"></div>
-            <div class="col-xs-10">
-                <h6 class=""><a href="#"> {{ job.title }} </a></h6>
-                <p class="">
-                    {{ job.description | truncate : 100 }}
-                </p>
-            </div>
-        </div>
+<div class="card px-sm-5 text-justify">
+    <div class="card-block">
+        <a href="{{job.url}}" target="_blank" class="text-primary">
+            <p class="m-0 h5"><img class="mr-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTooW8db6fRv4Du1MsBgPbzuLRoKUoFUAqSpWNJ1mhOkqJcn1K6" alt="" width="48" height="48">{{ job.title }}</p>
+        </a><br>
+        <p> {{ job.description | truncate : 200 }} </p>
     </div>
-    <div class="col-xs-10 col-xs-offset-2 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-0"><i class="fa fa-map-marker job__location"></i> {{ job.location }} </div>
-    <div class="col-xs-10 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-md-3">
-        <p>Posted 1 day ago</p>
-    </div>
-    <div class="col-xs-10 col-xs-offset-2 col-sm-2 col-sm-offset-0 col-md-1">
-        <div class=""><a href="{{job.url}}" target="_blank" class="btn btn-sm btn-primary">Détails</a></div>
+    <div class="card-block details py-0">
+        <p class="d-sm-inline-block">
+            <i class="fa fa-building"></i> {{ job.company }} </p>
+        <p class="d-sm-inline-block">
+            <i class="fa fa-map-marker"></i> {{ job.location }}</p>
+        <p class="d-sm-inline-block">
+            <i class="fa fa-clock"></i> {{ job.created_at }}</p>
     </div>
 </div>

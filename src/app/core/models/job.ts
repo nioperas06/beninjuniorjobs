@@ -1,4 +1,5 @@
 import { ModelInterface } from './model.interface';
+import * as moment from 'moment';
 
 export class Job implements ModelInterface {
 
@@ -10,6 +11,7 @@ export class Job implements ModelInterface {
   location: string;
   description: string;
   logo: string;
+  created_at: string;
 
   constructor(attrs: any = null) {
     if (attrs) {
@@ -26,6 +28,7 @@ export class Job implements ModelInterface {
     this.location = attrs.location;
     this.description = attrs.description;
     this.logo = attrs.logo;
+    this.created_at = moment(attrs.created_at).lang('fr').format('LL');
   }
 
   toJson(): Object {

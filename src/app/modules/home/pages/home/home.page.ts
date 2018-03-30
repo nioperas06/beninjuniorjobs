@@ -10,6 +10,7 @@ import { JobService } from '../../../../core/services';
 
 export class HomePage implements OnInit {
   jobs: Array<Job> = [];
+  searchText = '';
 
   constructor(
     private jobService: JobService
@@ -22,12 +23,31 @@ export class HomePage implements OnInit {
       .subscribe(
         (data) => {
           this.jobs = data;
-          console.log(this.jobs);
         },
         (err) => {
-          console.log(err);
         }
       );
+  }
+
+  onSearchChange(value: string) {
+    if (value === '') {
+      this.loadJobs();
+      return;
+    }
+    this.jobs = this.search(this.jobs, value);
+  }
+
+  search(jobs: Job[], searchText: string): Job[] {
+    if (!jobs) {
+      return [];
+    }
+    if (!searchText) {
+      return jobs;
+    }
+    searchText = searchText.toLowerCase();
+    return jobs.filter(it => {
+      return it.title.toLowerCase().includes(searchText) || it.description.toLowerCase().includes(searchText);
+    });
   }
 
   ngOnInit() {

@@ -1,14 +1,400 @@
-.job {
-    border: 1px solid #E4E3E2;
-    padding-top: 50px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    padding-right: 40px;
-    border-radius: 10px;
-    padding-left: 20px;
+.card:hover {
+    cursor: pointer;
 }
 
-.job:hover {
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    border-radius: .25rem;
+    background-color: #fff;
+    box-shadow: 5px 10px 25px rgba(0, 0, 0, .06);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+.card-bordered,
+.bordered {
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: none !important
+}
+
+.shadowed {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .06);
+}
+
+.dotted-border {
+    border: 4px dashed rgba(0, 0, 0, .1);
+    box-shadow: none !important
+}
+
+.img-border-x4 {
+    border: 5px solid #fff;
+}
+
+.card-block {
+    padding: 1.25rem;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.card-icon {
+    position: relative;
+}
+
+.card-icon:before {
+    content: '';
+    width: 3px;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: -1.25rem;
+    background: currentColor;
+    transition: .3s ease
+}
+
+.card-title {
+    margin-bottom: .75rem;
+}
+
+.card-subtitle {
+    margin-top: -.375rem;
+    margin-bottom: 0;
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+}
+
+.card-link:hover {
+    text-decoration: none;
+}
+
+.card-link+.card-link {
+    margin-left: 1.25rem;
+}
+
+.card>.list-group:first-child .list-group-item:first-child {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.card>.list-group:last-child .list-group-item:last-child {
+    border-bottom-right-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+.card-header {
+    margin-bottom: 0;
+    padding: .75rem 1.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    background-color: #f7f7f9;
+}
+
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+.card-footer {
+    padding: .75rem 1.25rem;
+    border-top: 1px solid rgba(0, 0, 0, .125);
+    background-color: #f7f7f9;
+}
+
+.card-footer:last-child {
+    border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+}
+
+.card-header-tabs {
+    margin-right: -.625rem;
+    margin-bottom: -.75rem;
+    margin-left: -.625rem;
+    border-bottom: 0;
+}
+
+.card-header-pills {
+    margin-right: -.625rem;
+    margin-left: -.625rem;
+}
+
+.card-primary {
+    border-color: #029ae0;
+    background-color: #029ae0;
+}
+
+.card-primary .card-header,
+.card-primary .card-footer {
+    background-color: transparent;
+}
+
+.card-success {
+    border-color: #5cb85c;
+    background-color: #5cb85c;
+}
+
+.card-success .card-header,
+.card-success .card-footer {
+    background-color: transparent;
+}
+
+.card-info {
+    border-color: #5bc0de;
+    background-color: #5bc0de;
+}
+
+.card-info .card-header,
+.card-info .card-footer {
+    background-color: transparent;
+}
+
+.card-warning {
+    border-color: #f0ad4e;
+    background-color: #f0ad4e;
+}
+
+.card-warning .card-header,
+.card-warning .card-footer {
+    background-color: transparent;
+}
+
+.card-danger {
+    border-color: #d9534f;
+    background-color: #d9534f;
+}
+
+.card-danger .card-header,
+.card-danger .card-footer {
+    background-color: transparent;
+}
+
+.card-outline-primary {
+    border-color: #029ae0;
+    background-color: transparent;
+}
+
+.card-outline-secondary {
+    border-color: #ccc;
+    background-color: transparent;
+}
+
+.card-outline-info {
+    border-color: #5bc0de;
+    background-color: transparent;
+}
+
+.card-outline-success {
+    border-color: #5cb85c;
+    background-color: transparent;
+}
+
+.card-outline-warning {
+    border-color: #f0ad4e;
+    background-color: transparent;
+}
+
+.card-outline-danger {
+    border-color: #d9534f;
+    background-color: transparent;
+}
+
+.card-inverse {
+    color: rgba(255, 255, 255, .65);
+}
+
+.card-inverse .card-header,
+.card-inverse .card-footer {
+    border-color: rgba(255, 255, 255, .2);
+    background-color: transparent;
+}
+
+.card-inverse .card-header,
+.card-inverse .card-footer,
+.card-inverse .card-title,
+.card-inverse .card-blockquote {
+    color: #fff;
+}
+
+.card-inverse .card-link,
+.card-inverse .card-text,
+.card-inverse .card-subtitle,
+.card-inverse .card-blockquote .blockquote-footer {
+    color: rgba(255, 255, 255, .65);
+}
+
+.card-inverse .card-link:focus,
+.card-inverse .card-link:hover {
+    color: #fff;
+}
+
+.card-blockquote {
+    margin-bottom: 0;
+    padding: 0;
+    border-left: 0;
+}
+
+.avatar-mast>img {
+    width: 100px;
+    border-radius: 50%
+}
+
+.card-img {
+    border-radius: calc(.25rem - 1px);
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+}
+
+.card-img-top {
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
+
+.card-img-bottom {
+    border-bottom-right-radius: calc(.25rem - 1px);
+    border-bottom-left-radius: calc(.25rem - 1px);
+}
+
+.card-group .card {
+    background: #fff;
+    box-shadow: none;
+    position: relative;
+    border-radius: 0;
+    transition: .3s ease-out
+}
+
+.card-group .card:before {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .1);
+    transition: .3s ease-out
+}
+
+.card-group .card * {
+    z-index: 1010;
+}
+
+.card-group .card:hover {
     cursor: pointer;
-    background-color: bisque;
+    color: #000;
+    transition: .3s
+}
+
+.card-group .card:after {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: .3s ease-out
+}
+
+.card-group .card:hover:after {
+    background-color: #fff;
+    transform: scale(1.01, 1.01);
+    box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, .1);
+}
+
+.card-group .card:hover .card-icon:before {
+    transform: translateX(-3px);
+}
+
+@media (min-width: 576px) {
+    .card-deck {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+    .card-deck .card {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 0 0;
+        -ms-flex: 1 0 0;
+        flex: 1 0 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    }
+    .card-deck .card:not(:first-child) {
+        margin-left: 15px;
+    }
+    .card-deck .card:not(:last-child) {
+        margin-right: 15px;
+    }
+    .sticky-avatar {
+        position: -webkit-sticky;
+        position: sticky;
+        z-index: 1020;
+        top: 0;
+    }
+}
+
+
+/*@media (min-width: 576px) {
+    .card-group {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+    .card-group .card + .card {
+        margin-left: 0
+    }
+    .card-group .card:first-child .card-img-top {
+        border-top-right-radius: 0;
+    }
+    .card-group .card:first-child .card-img-bottom {
+        border-bottom-right-radius: 0;
+    }
+}*/
+
+@media (min-width: 576px) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+        -webkit-column-gap: 1.25rem;
+        -moz-column-gap: 1.25rem;
+        column-gap: 1.25rem;
+    }
+    .card-columns .card {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: .75rem;
+    }
 }

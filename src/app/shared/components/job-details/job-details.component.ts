@@ -10,7 +10,8 @@ import { Job } from '../../../core';
 export class JobDetailsComponent implements OnInit {
   @Input() job: Job;
 
-  constructor(public share: ShareButtons) { }
+  constructor(public share: ShareButtons) {
+  }
 
   ngOnInit() {
   }
