@@ -1,7 +1,7 @@
 <div class="card px-sm-5 text-justify">
     <div class="card-block">
         <a href="{{job.url}}" target="_blank" class="text-primary">
-            <p class="m-0 h5"><img class="mr-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTooW8db6fRv4Du1MsBgPbzuLRoKUoFUAqSpWNJ1mhOkqJcn1K6" alt="" width="48" height="48">{{ job.title }}</p>
+            <p class="m-0 h5"><img class="mr-3" src="{{job.logo}}" alt="" width="48" height="48">{{ job.title }}</p>
         </a><br>
         <p> {{ job.description | truncate : 200 }} </p>
     </div>
