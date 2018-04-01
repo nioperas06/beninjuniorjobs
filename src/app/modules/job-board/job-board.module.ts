@@ -6,6 +6,7 @@ import { JobBoardRoutingModule } from './job-board-routing.module';
 import { AddJobComponent } from './pages/add-job/add-job.component';
 import { CoreModule } from '../../core';
 import { CustomFormsModule } from 'ng2-validation';
+import { SendEmailComponent } from './pages/send-email/send-email.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { CustomFormsModule } from 'ng2-validation';
     CustomFormsModule,
     FormsModule
   ],
-  declarations: [AddJobComponent]
+  declarations: [AddJobComponent, SendEmailComponent]
 })
 export class JobBoardModule { }

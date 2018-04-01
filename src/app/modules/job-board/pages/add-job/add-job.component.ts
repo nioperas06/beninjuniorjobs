@@ -32,12 +32,10 @@ export class AddJobComponent implements OnInit {
       })
       .subscribe(
         (response) => {
-          console.log(response);
           this.email = response.email;
           this.jobSent = true;
         },
         (error) => {
-         console.log(error);
         }
       );
   }

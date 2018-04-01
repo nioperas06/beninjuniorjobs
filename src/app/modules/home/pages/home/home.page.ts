@@ -11,6 +11,7 @@ import { JobService } from '../../../../core/services';
 export class HomePage implements OnInit {
   jobs: Array<Job> = [];
   searchText = '';
+  loading = true;
 
   constructor(
     private jobService: JobService
@@ -23,6 +24,7 @@ export class HomePage implements OnInit {
       .subscribe(
         (data) => {
           this.jobs = data;
+          this.loading = false;
         },
         (err) => {
         }
@@ -30,6 +32,7 @@ export class HomePage implements OnInit {
   }
 
   onSearchChange(value: string) {
+    this.loading = true;
     if (value === '') {
       this.loadJobs();
       return;

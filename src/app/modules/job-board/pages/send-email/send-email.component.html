@@ -1,0 +1,105 @@
+<app-header></app-header>
+<div *ngIf="!show">
+    <div style="background-image: url(/assets/img/icons-background.svg), linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:#fff; margin-top: -20px">
+        <div class="container">
+            <div class="row justify-content-center align-items-center" style="height: 400px">
+                <div class="col-md-10 col-sm-12 text-center">
+                    <h1>Créer une application n'a jamais été aussi simple</h1>
+                    <p>
+                        Recevez gratuitement des devis des membres d'une formidable communauté de développeurs pour vos idées d'applications.
+                    </p>
+                    <p>
+                        <a (click)="showForm()" class="btn btn-light btn-lg" style="border-radius: 80px; cursor: pointer; color: black">Recevoir un devis</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <br><br>
+        <h1 class="text-center">Comment ça marche?</h1>
+        <div class="row justify-content-center" style="padding-top: 80px">
+            <div class="col-md-8">
+                <h5>1. Décrivez votre idée d'application 🤓</h5>
+                <p>
+                    Il est essentiel que votre projet soit expliqué aux développeurs d’applications de façon détaillée pour que ceux-ci puisse comprendre toutes les caractéristiques de la future application et vous proposer un devis approprié.
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="padding-top: 50px">
+            <div class="col-md-8">
+                <h5>2. Recevez les devis des développeurs interessés 🙋‍</h5>
+                <p>
+                    Recevez gratuitement plusieurs devis pour la réalisation de votre projet de développement d'applications d'une large commaunauté de développeurs talentueux.
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="padding-top: 50px">
+            <div class="col-md-8">
+                <h5>3. Contactez directement les développeurs qui vous conviennent ou faites appel à BeninTechJobs comme Product Manager 🚀</h5>
+                <p>
+                    Choisissez le développeur qui vous convient ou laissez BeninTechJobs être votre relais afin dans la gestion de la vie du produit, depuis sa conception jusqu’à sa consommation.
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="padding-top: 50px">
+            <div class="col-md-4">
+                <p class="text-center">
+                    <a (click)="showForm()" class="btn btn-lg" style="border-radius: 80px; color: white; background-color: #6976de; cursor: pointer">Recevoir un devis</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" *ngIf="show">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-12">
+            <div class="text-center" *ngIf="quoteSent">
+                <img src="https://lukaszadam.com/img/illustration/11.svg" alt="" class="img-fluid" style="width: 200px">
+                <h4 style="padding-top: 50px">Vous serez informé ( {{ email }} ) dès que votre offre sera validée. Merci!</h4>
+                <br>
+                <a routerLink="/" class="btn btn-primary">Retour à l'acceuil</a>
+            </div>
+            <div *ngIf="!quoteSent">
+                <h4 class="text-center">Veuillez décrire votre idée via le formulaire ci-dessous:</h4>
+                <form (ngSubmit)="submit(form)" #form="ngForm">
+                    <fieldset [disabled]="loading">
+                        <div class="form-group">
+                            <label>Nom et Prénom(s)</label>
+                            <input type="text" name="name" id="name" class="form-control" required [(ngModel)]="quote.name" #nameControl="ngModel" [ngClass]="{'is-invalid': form.submitted && nameControl.invalid}" class="form-control" placeholder="BeninTechJobs">
+                            <div class="invalid-feedback">
+                                Nom et Prénom(s) invalide.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" id="email" class="form-control" required email [(ngModel)]="quote.email" #emailControl="ngModel" [ngClass]="{'is-invalid': form.submitted && emailControl.invalid}" placeholder="junior@benintechjobs.xyz">
+                            <div class="invalid-feedback">
+                                Email invalide.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Numéro de téléphone</label>
+                            <input type="text" name="phone" id="phone" class="form-control" required [(ngModel)]="quote.phone" #phoneControl="ngModel" [ngClass]="{'is-invalid': form.submitted && phoneControl.invalid}" class="form-control" placeholder="22966526416" min="8">
+                            <div class="invalid-feedback">
+                                Numéro de téléphone invalide.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Décrivez succintement l'application</label>
+                            <small id="emailHelp" class="form-text text-muted">Évitez les réponses du style: WhatsApp des fermiers ou autres.</small>
+                            <textarea name="description" id="description" class="form-control" required [(ngModel)]="quote.description" #descriptionControl="ngModel" [ngClass]="{'is-invalid': form.submitted && descriptionControl.invalid}" class="form-control" cols="20" rows="10"></textarea>
+                            <div class="invalid-feedback">
+                                Description invalide.
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-block btn-primary">Soumettre</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
