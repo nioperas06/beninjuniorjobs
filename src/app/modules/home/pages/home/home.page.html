@@ -37,7 +37,7 @@
 <section class="container" style="padding-top: 100px">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="bouncing-loader" *ngIf="loading && !jobs?.length == 0">
+            <div class="bouncing-loader" *ngIf="loading && jobs?.length != 0">
                 <div></div>
                 <div></div>
                 <div></div>
