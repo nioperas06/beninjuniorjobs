@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComponentsModule } from './components/components.module';
-import { FilterPipe } from './pipes/filter.pipe';
+import { ReversePipe } from './pipes/reverse.pipe';
 
 @NgModule({
   imports: [
     CommonModule,
     ComponentsModule
   ],
-  declarations: [FilterPipe],
-  exports: [ ComponentsModule, FilterPipe ]
+  declarations: [ReversePipe],
+  exports: [ ComponentsModule, ReversePipe ]
 })
 export class SharedModule { }

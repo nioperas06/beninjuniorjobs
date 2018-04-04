@@ -42,7 +42,7 @@
                 <div></div>
                 <div></div>
             </div>
-            <app-job-details *ngFor="let job of jobs" [job]="job">
+            <app-job-details *ngFor="let job of jobs | reverse" [job]="job">
             </app-job-details>
         </div>
         <div class="text-center" *ngIf="jobs?.length == 0">

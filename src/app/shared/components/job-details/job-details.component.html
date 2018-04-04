@@ -1,7 +1,8 @@
 <div class="card px-sm-5 text-justify">
     <div class="card-block">
         <a href="{{job.url}}" target="_blank" class="text-primary">
-            <p class="m-0 h5"><img class="mr-3" src="http://nautilus-technology.net/wp-content/themes/h-code/pictures/LogoLarge.svg" alt="" width="50" height="50">{{ job.title }}</p>
+            <p class="m-0 h5">
+                {{ job.title }}</p>
         </a><br>
         <p> {{ job.description | truncate : 200 }} </p>
     </div>
